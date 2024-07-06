@@ -30,13 +30,11 @@ readonly class RendererFactory implements RendererFactoryInterface
     {
         $format = $request->get('_format');
 
-        switch ($format) {
-            case 'json':
-                return new JsonRenderer();
-            default:
-                return new HtmlRenderer(
-                    $this->pluginConfiguration->getProjectDir(),
-                );
-        }
+        return match ($format) {
+            'json' => new JsonRenderer(),
+            default => new HtmlRenderer(
+                $this->pluginConfiguration->getProjectDir(),
+            ),
+        };
     }
 }

@@ -13,6 +13,7 @@ declare(strict_types=1);
 
 namespace Micro\Plugin\HttpExceptionsDev\Business\Executor;
 
+use Micro\Plugin\HttpCore\Business\Executor\RouteExecutorInterface;
 use Micro\Plugin\HttpExceptionsDev\Business\Exception\Renderer\RendererFactoryInterface;
 use Micro\Plugin\HttpExceptionsDev\Configuration\HttpExceptionResponseDevPluginConfigurationInterface;
 use Micro\Plugin\HttpCore\Business\Executor\RouteExecutorFactoryInterface;

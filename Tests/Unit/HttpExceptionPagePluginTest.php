@@ -27,7 +27,7 @@ use Symfony\Component\HttpFoundation\Request;
  */
 class HttpExceptionPagePluginTest extends TestCase
 {
-    protected function createKernel(string $env)
+    protected function createKernel(string $env): AppKernel
     {
         $kernel = new AppKernel(
             new DefaultApplicationConfiguration([
@@ -143,7 +143,7 @@ class HttpExceptionPagePluginTest extends TestCase
         $this->assertEquals($result, $response->getContent());
     }
 
-    public function dataProviderSuccess()
+    public static function dataProviderSuccess(): array
     {
         return [
             ['dev', '/', true, 'Hello, world', 'html'],
@@ -159,7 +159,7 @@ class HttpExceptionPagePluginTest extends TestCase
         ];
     }
 
-    public function dataProviderException()
+    public static function dataProviderException(): array
     {
         return [
             ['dev', '/404', true, null, 'html'],

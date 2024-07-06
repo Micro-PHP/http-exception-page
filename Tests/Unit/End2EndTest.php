@@ -17,8 +17,8 @@ use Micro\Framework\BootPluginDependent\Plugin\PluginDependedInterface;
 use Micro\Plugin\HttpCore\Facade\HttpFacadeInterface;
 use Micro\Plugin\HttpExceptionsDev\HttpExceptionResponseDevPlugin;
 use Micro\Plugin\HttpExceptions\HttpExceptionResponsePlugin;
-use Micro\Plugin\Http\HttpRouterCodePlugin;
-use Micro\Plugin\Http\Plugin\RouteProviderPluginInterface;
+use Micro\Plugin\HttpRouterCode\HttpRouterCodePlugin;
+use Micro\Plugin\HttpRouterCode\Plugin\RouteProviderPluginInterface;
 use Symfony\Component\HttpFoundation\Response;
 
 /**

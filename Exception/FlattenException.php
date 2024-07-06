@@ -13,6 +13,7 @@ declare(strict_types=1);
 
 namespace Micro\Plugin\HttpExceptionsDev\Exception;
 
+use Micro\Plugin\HttpCore\Exception\HttpInternalServerException;
 use Symfony\Component\HttpFoundation\Response;
 
 /**
